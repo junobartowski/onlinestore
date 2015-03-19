@@ -1,0 +1,295 @@
+[
+    {
+        "name": "kriswallsmith/buzz",
+        "version": "v0.11",
+        "version_normalized": "0.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kriswallsmith/Buzz.git",
+            "reference": "a0f207ac4939978b604be9bec5d5b19baecd8165"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/a0f207ac4939978b604be9bec5d5b19baecd8165",
+            "reference": "a0f207ac4939978b604be9bec5d5b19baecd8165",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "suggest": {
+            "ext-curl": "*"
+        },
+        "time": "2014-03-24 21:56:09",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Buzz": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kris Wallsmith",
+                "email": "kris.wallsmith@gmail.com",
+                "homepage": "http://kriswallsmith.net/"
+            }
+        ],
+        "description": "Lightweight HTTP client",
+        "homepage": "https://github.com/kriswallsmith/Buzz",
+        "keywords": [
+            "curl",
+            "http client"
+        ]
+    },
+    {
+        "name": "payum/core",
+        "version": "0.9.3",
+        "version_normalized": "0.9.3.0",
+        "target-dir": "Payum/Core",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Payum/Core.git",
+            "reference": "7782eda7b0b35f731f9bf4a5a0c4ba921f3c8e65"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Payum/Core/zipball/7782eda7b0b35f731f9bf4a5a0c4ba921f3c8e65",
+            "reference": "7782eda7b0b35f731f9bf4a5a0c4ba921f3c8e65",
+            "shasum": ""
+        },
+        "require": {
+            "kriswallsmith/buzz": "*",
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "doctrine/mongodb": "1.0.*@dev",
+            "doctrine/mongodb-odm": "1.0.*@dev",
+            "doctrine/orm": "2.*",
+            "ext-curl": "*",
+            "ext-pdo_sqlite": "*",
+            "phpunit/phpunit": "3.7.*",
+            "psr/log": "~1.0",
+            "symfony/http-foundation": "~2",
+            "symfony/http-kernel": "~2",
+            "symfony/routing": "~2",
+            "zendframework/zend-db": "~2"
+        },
+        "suggest": {
+            "doctrine/mongodb-odm": "If you want to store models to mongo doctrin2 ODM",
+            "doctrine/orm": "If you want to store models to database using doctrin2 ORM",
+            "monolog/monolog": "In case you want to use logger",
+            "payum/authorize-net-aim": "If you want to use Authorize.Net AIM payment gateway",
+            "payum/be2bill": "If you want to use be2bill payment gateway",
+            "payum/omnipay-bridge": "If you want to use omnipay's gateways",
+            "payum/payex": "If you want to use payex payment gateway",
+            "payum/paypal-express-checkout-nvp": "If  you want to use paypal express checkout, digital goods or recurring payments",
+            "payum/paypal-ipn": "If you want to use paypal instant payment notifications(Paypal IPN)",
+            "payum/paypal-pro-checkout-nvp": "If you want to use paypal pro checkout",
+            "payum/paypal-rest": "If you want to use paypal rest gateway",
+            "symfony/http-foundation": "If you want to use HttpRequestVerifier or ResponseInteractiveRequest from symfony's bridge",
+            "symfony/http-kernel": "If you want to use HttpRequestVerifier from symfony's bridge",
+            "symfony/routing": "If you want to use TokenFactory from symfony's bridge",
+            "zendframework/zend-db": "If you want to store models to Zend Db ORM"
+        },
+        "time": "2014-07-21 19:40:49",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.9-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Payum\\Core\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Payum project",
+                "homepage": "http://payum.forma-dev.com/"
+            },
+            {
+                "name": "Community contributions",
+                "homepage": "https://github.com/Payum/Payum/contributors"
+            },
+            {
+                "name": "Kotlyar Maksim",
+                "email": "kotlyar.maksim@gmail.com"
+            }
+        ],
+        "description": "Domain friendly payment framework. Paypal, payex, authorize.net, be2bill, omnipay, recurring paymens, instant notifications and many more",
+        "homepage": "http://payum.forma-dev.com",
+        "keywords": [
+            "authorize.net",
+            "be2bill",
+            "instant payment notification",
+            "ipn",
+            "jms payment",
+            "omnipay",
+            "payex",
+            "payment",
+            "paypal",
+            "paypal digital goods",
+            "paypal express",
+            "paypal pro",
+            "paypal rest",
+            "recurring payment"
+        ]
+    },
+    {
+        "name": "payum/paypal-express-checkout-nvp",
+        "version": "0.9.0",
+        "version_normalized": "0.9.0.0",
+        "target-dir": "Payum/Paypal/ExpressCheckout/Nvp",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Payum/PaypalExpressCheckoutNvp.git",
+            "reference": "cdf452f29d44dbf7eef0d2186d3e027b4c099eeb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Payum/PaypalExpressCheckoutNvp/zipball/cdf452f29d44dbf7eef0d2186d3e027b4c099eeb",
+            "reference": "cdf452f29d44dbf7eef0d2186d3e027b4c099eeb",
+            "shasum": ""
+        },
+        "require": {
+            "payum/core": "0.9.*",
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2014-06-17 07:02:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.9-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Payum\\Paypal\\ExpressCheckout\\Nvp": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maksim Kotlyar",
+                "email": "kotlyar.maksim@gmail.com"
+            },
+            {
+                "name": "Payum project",
+                "homepage": "http://payum.forma-dev.com/"
+            },
+            {
+                "name": "Community contributions",
+                "homepage": "https://github.com/Payum/PaypalExpressCheckoutNvp/contributors"
+            }
+        ],
+        "description": "Paypal express checkout",
+        "homepage": "http://payum.forma-dev.com/",
+        "keywords": [
+            "digital goods",
+            "express checkout",
+            "payment",
+            "paypal",
+            "recurring payment"
+        ]
+    },
+    {
+        "name": "payum/payum-yii-extension",
+        "version": "0.9.2",
+        "version_normalized": "0.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Payum/PayumYiiExtension.git",
+            "reference": "e847abb9cc01baf1b34e68657cc615f899da6295"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Payum/PayumYiiExtension/zipball/e847abb9cc01baf1b34e68657cc615f899da6295",
+            "reference": "e847abb9cc01baf1b34e68657cc615f899da6295",
+            "shasum": ""
+        },
+        "require": {
+            "payum/core": "~0.9.0",
+            "php": ">=5.3.2"
+        },
+        "suggest": {
+            "payum/authorize-net-aim": "If you want to use authorize.net gateway",
+            "payum/be2bill": "If you want to use be2bill gateway",
+            "payum/omnipay-bridge": "If you want to use omnipay provided gateways",
+            "payum/payex": "If you want to use payex gateway",
+            "payum/paypal-express-checkout-nvp": "If you want to use paypal express checkout nvp gateway",
+            "payum/paypal-pro-checkout-nvp": "If you want to use paypal pro checkout nvp gateway",
+            "yiisoft/yii": "If you plan to use this extension outside of a Yii project"
+        },
+        "time": "2014-07-21 11:22:40",
+        "type": "yii-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.9-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Payum\\YiiExtension": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Lagoda Pavel",
+                "email": "plagoda@webdevs.com"
+            },
+            {
+                "name": "Payum project",
+                "homepage": "http://payum.forma-dev.com/"
+            },
+            {
+                "name": "Community contributions",
+                "homepage": "https://github.com/Payum/Payum/contributors"
+            },
+            {
+                "name": "Kotlyar Maksim",
+                "email": "kotlyar.maksim@gmail.com"
+            }
+        ],
+        "description": "Rich payment solutions for Yii framework. Paypal, payex, authorize.net, be2bill, omnipay, recurring paymens, instant notifications and many more",
+        "homepage": "http://payum.forma-dev.com",
+        "keywords": [
+            "authorize.net",
+            "be2bill",
+            "instant notification",
+            "offline",
+            "omnipay",
+            "payex",
+            "payment",
+            "paypal",
+            "paypal express checkout",
+            "paypal pro checkout",
+            "recurring payment"
+        ]
+    }
+]

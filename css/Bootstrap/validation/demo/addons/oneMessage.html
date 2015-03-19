@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FormValidation demo</title>
+
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../dist/css/formValidation.css"/>
+
+    <script type="text/javascript" src="../../vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/formValidation.js"></script>
+    <script type="text/javascript" src="../../dist/js/framework/bootstrap.js"></script>
+    <script type="text/javascript" src="../../src/js/addon/oneMessage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="page-header">
+                    <h2>oneMessage add-on</h2>
+                </div>
+
+                <form id="defaultForm" method="post" class="form-horizontal" action="/demo/target.php">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Username</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <button type="submit" class="btn btn-default">Validate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // You can enable the add-on via HTML attributes
+    // <form data-fv-addons="oneMessage, otherAddOn, anotherOne">
+    $('#defaultForm').formValidation({
+        addOns: {
+            // Show only one message for fields
+            // oneMessage: {}
+            oneMessage: {
+                username: true
+            }
+        },
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            username: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9]+$/,
+                        message: 'The username can only consist of alphabetical and digits'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reCaptcha addon</title>
+
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../dist/css/formValidation.css"/>
+
+    <script type="text/javascript" src="../../vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/formValidation.js"></script>
+    <script type="text/javascript" src="../../dist/js/framework/bootstrap.js"></script>
+    <script type="text/javascript" src="../../src/js/addon/reCaptcha.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="page-header">
+                    <h2>reCaptcha add-on</h2>
+                </div>
+
+                <form id="defaultForm" method="post" class="form-horizontal" action="/demo/target.php"
+                        data-fv-addons="requiredIcon"
+                        data-fv-addons-requiredicon-icon="glyphicon glyphicon-asterisk">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Captcha</label>
+                        <div class="col-sm-6">
+                            <div id="captchaContainer"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-5 col-sm-offset-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // You can enable and set add-on options via HTML attributes
+    // <form
+    //      data-fv-addons="reCaptcha, otherAddOn, anotherOne"
+    //      data-fv-addons-recaptcha-element="captchaContainer"
+    //      data-fv-addons-recaptcha-theme="white"
+    //      data-fv-addons-recaptcha-publickey="6LfiX_0SAAAAAFGN6mRslurxcH4V1zXAfXIp3nv_"
+    //      data-fv-addons-recaptcha-url="/demo/recaptcha.php"
+    //      data-fv-addons-recaptcha-message="The captcha is not valid">
+
+    $('#defaultForm').formValidation({
+        addOns: {
+            reCaptcha: {
+                element: 'captchaContainer',
+                theme: 'white',
+                publicKey: '6LfiX_0SAAAAAFGN6mRslurxcH4V1zXAfXIp3nv_',
+                url: '/demo/recaptcha.php',
+                message: 'The captcha is not valid'
+            }
+        },
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            recaptcha_response_field: {
+                validators: {
+                    notEmpty: {
+                        message: 'The captcha is required and can\'t be empty'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

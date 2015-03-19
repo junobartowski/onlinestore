@@ -1,0 +1,59 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  background: #555 url(../images/form-bg.png) repeat top left;
+}
+
+.btn-input {
+   display: block;
+}
+
+.btn-input .btn.form-control {
+    text-align: left;
+}
+
+.btn-input .btn.form-control span:first-child {
+   left: 10px;
+   overflow: hidden;
+   position: absolute;
+   right: 25px;
+}
+
+.btn-input .btn.form-control .caret {
+   margin-top: -1px;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+}
+.preloader_small {
+  display: none;
+}
+.bar {
+    height: 18px;
+    background: green;
+}
+.jqGridTable {
+    margin: 0 auto;
+    max-width: 90% !important;
+}
+.jqGridTableFilter {
+    margin: 0 auto;
+    max-width: 90% !important;
+}
+#form_buy {
+  text-align: center;
+}
+#footer {
+    position: fixed;
+    z-index: 3000;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    color: #cccccc;
+    font-size: 12px;
+    font-style: oblique;
+    border-top: #000000 1px solid;
+}

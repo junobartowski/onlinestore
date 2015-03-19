@@ -1,0 +1,163 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+body { 
+  background: #9f9f9f url('../images/mochaGrunge.png'); /* http://subtlepatterns.com/mocha-grunge/ */
+  font-size: 62.5%; 
+  line-height: 1; 
+  padding-bottom: 75px;
+}
+
+br { display: block; line-height: 2.2em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+/* Centered heading with rules */
+h1 {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: 'Wellfleet', Arial, sans-serif;
+  font-size: 3.4em;
+  line-height: 1.4em;
+  color: #454545;
+  padding: .2em 0;
+}
+h1:before,
+h1:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 2px;
+  vertical-align: middle;
+  background: #454545;
+}
+h1:before {    
+  left: -.5em;
+  margin: 0 0 0 -50%;
+}
+h1:after {    
+  left: .5em;
+  margin: 0 -50% 0 0;
+}
+h1 > span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+header {
+  display: block;
+  padding: 8px 0;
+}
+
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#imagecrop {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#form-container {
+  display: block;
+  position: absolute; 
+  top: 300px; 
+  right: 35px;
+}
+
+#submit {
+  color: #fff;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px #131313;
+  border: 7px solid #b0e49f;
+  padding: 14px 9px;
+  cursor: pointer;
+  background-color: #62be46;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#62be46), to(#41a62b));
+  background-image: -webkit-linear-gradient(top, #62be46, #41a62b);
+  background-image: -moz-linear-gradient(top, #62be46, #41a62b);
+  background-image: -ms-linear-gradient(top, #62be46, #41a62b);
+  background-image: -o-linear-gradient(top, #62be46, #41a62b);
+  background-image: linear-gradient(top, #62be46, #41a62b);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#submit:hover {
+  background-color: #72ce54;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#72ce54), to(#49b233));
+  background-image: -webkit-linear-gradient(top, #72ce54, #49b233);
+  background-image: -moz-linear-gradient(top, #72ce54, #49b233);
+  background-image: -ms-linear-gradient(top, #72ce54, #49b233);
+  background-image: -o-linear-gradient(top, #72ce54, #49b233);
+  background-image: linear-gradient(top, #72ce54, #49b233);
+}
+#submit:active {
+  -webkit-box-shadow: inset 0 2px 13px -1px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0 2px 13px -1px rgba(0,0,0,0.35);
+  box-shadow: inset 0 2px 13px -1px rgba(0,0,0,0.35);
+}
+
+
+/* jcrop styles */
+.jc-demo-box {
+  position: relative;
+  text-align: left;
+  margin: 1.5em auto;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  padding: 1em 2em 2em;
+}
+
+
+/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 10px;
+  right: -210px;
+  background-color: #fff;
+  padding: 6px;
+  border: 1px solid #bcbcbc;
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
