@@ -1,0 +1,45 @@
+- Created using the latest version of Yii Framework.
+
+- Used Bootstrap technology to adapt mobile response.
+
+- All the models are highly reusable in case there is a need to migrate to another framework because the query is not Yii's default but PDO instead.
+
+- All the error codes are found only in one file
+
+- If we are updating three tables, in case there will be an error on the 2nd or last table, it will roll back the transaction to prevent dummy data
+
+- Has both server-side and client-side validations
+
+- Supports multiple image upload.
+
+- Supports multiple uploads with progress bar for each image and progress bar for all images
+
+- Supports auto image file resizing using imagick
+
+- Supports file type checking
+
+- Very fast data loading because it doesnt use SELECT * but it only selects what are needed (ONLY IF I HAVE OPTIMIZED THE QUERIES, which I haven't because I don't have time yet! Hahaha)
+
+- Very fast page loading because included files such as javascripts and css are not included at once but included only if necessary
+
+- Very fast throughout the user's browsing session because it doesnt put everything in session. Unsets those sessions that have already done with their purpose. WIth this, the browser is not heavy.
+
+- Supports creating thumbnails upon uploading of image so that showing the list of items doesnt use the big images but only the thumbnails with smaller file size :)
+
+- Based on one of the most successful web aps in the Philippines
+
+- Supports hundreds even thousands of Charities if we want
+
+- Support list view and grid view of items
+
+- Also supports email sending
+
+- Has ready made scripts in case you need to generate report in excel and pdf
+
+- Already have tables for different countries, post codes, and area codes
+
+- Use camel case coding so that it is easier to maintain
+
+- Generates receipts and can support viewing of receipts and all transactions because the database has a designed table for it which is now working on insert
+
+- Has ready made tables for user comments
